@@ -129,7 +129,7 @@
         });
 
         function handleYesClick() {
-            titleElement.innerHTML = "Anh yêu em  ,Anh hứa không làm em buồn nữa đâuuu :3";
+            titleElement.innerHTML = "Cảm ơn em đã tha thứ Hứa từ nay không làm em buồn nữa :3";
             buttonsContainer.classList.add("hidden");
             changeImage("yes");
         }
@@ -157,7 +157,16 @@
         }
 
         function changeImage(gif) {
-            catImg.src = `gif/cat-${gif}.gif`;
+            const gifURLs = {
+                1: "https://media.giphy.com/media/13borq7Zo2kulO/giphy.gif",
+                2: "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzNxaXB0bzhibHQ5dGhsbHBxaGIycHRqc3V3NjU1ZjZpNzQwb3l0ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/71PLYtZUiPRg4/giphy.webp",
+                3: "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Jwa3N4N3NpdHl2Z2ppbGVjNHI4dzU2bjhhaDU0MXNmcHVuc3l6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OjiSLBg7s27kaIGS8o/giphy.webp",
+                4: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2cyN2E5bWhkM3JsNHZ2NGgzeW55dThkcG11ZDFxdnJib3N6bGJrdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1o1l51S2CcWLtFzTFe/giphy.webp",
+                5: "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWNpYWUwMW9wN3dxOGk5MzcyMG5mdWR5cXFrcjVxcXNianhjaXppYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ihiIj3GOovn1FuSaYl/giphy.webp",
+                yes: "https://media1.tenor.com/m/dteyPLcdJJkAAAAC/cats-love.gif"
+            };
+
+            catImg.src = gifURLs[gif] || gifURLs[1];
         }
 
         function updateNoButtonText() {
